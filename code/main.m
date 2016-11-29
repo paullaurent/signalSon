@@ -1,0 +1,1 @@
+transformeeDeFourier(880,44100,11024,1000);
