@@ -5,7 +5,7 @@ N_v = 0:N-1;
 Nfft = 4096;
 X = fft(x,Nfft);
 
-%%Représentations
+%%Représentations 
 
 axe_f = -fe/2:fe/Nfft:fe/2-fe/Nfft;
 
