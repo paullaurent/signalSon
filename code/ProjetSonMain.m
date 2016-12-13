@@ -12,9 +12,9 @@ N_rep = 1000; %nombre d'échantillon voulu
 
 ma_fct(fe, N, f0, N_rep);
 
-x = ma_fct(fe, N, f0, N_rep);
+%x = ma_fct(fe, N, f0, N_rep);
 
-soundsc(x,fe+2000); % si fe plus grand, son plus aigu
+%soundsc(x,fe+2000); % si fe plus grand, son plus aigu
 
 
 
@@ -47,3 +47,4 @@ for ii = 1:taille_m
 end
 
 soundsc(morceau,fe)
+plot (1:341744,morceau)
