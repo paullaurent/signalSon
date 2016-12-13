@@ -98,7 +98,7 @@ spectrogram(s,rectwin(N_fem),N_fem/2,Nfft,44100,'yaxis');
 
 %% Ajout du bruit 
 
-% eval pour mozart
+% 
 SonBruit = blancGaussien(mozart,15,'tonal');
 soundsc(SonBruit);
 

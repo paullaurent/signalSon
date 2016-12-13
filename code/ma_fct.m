@@ -1,7 +1,7 @@
-function [] = ma_fct(x,fe, N, f0, N_rep)
+function [x] = ma_fct(fe, N, f0, N_rep)
 
 N_v = 0:N-1;
-%x = sin(2*pi*f0/fe*N_v);
+x = sin(2*pi*f0/fe*N_v);
 Nfft = 4096;
 X = fft(x,Nfft);
 
