@@ -5,7 +5,7 @@ x = sin(2*pi*f0/fe*N_v);
 Nfft = 4096;
 X = fft(x,Nfft);
 
-%%Représentations
+%%Représentations 
 
 axe_f = -fe/2:fe/Nfft:fe/2-fe/Nfft;
 

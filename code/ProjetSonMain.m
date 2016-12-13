@@ -10,7 +10,7 @@ fe = 44100;
 N_v = 0:N-1; % vecteur 
 N_rep = 1000; %nombre d'échantillon voulu 
 
-ma_fct(fe, N, f0, N_rep);
+%ma_fct(fe, N, f0, N_rep); 
 
 %x = ma_fct(fe, N, f0, N_rep);
 
@@ -47,4 +47,26 @@ for ii = 1:taille_m
 end
 
 soundsc(morceau,fe)
+
 plot (1:341744,morceau)
+
+
+%% représentation temporelle 
+subplot 211;
+plot(1:length(morceau), morceau);
+xlabel('t(s)');
+ylabel('amplitude');
+%%spectrogramme
+subplot 212;
+N_fem=256;
+Nfft=2^(nextpow2(N_fem));
+spectrogram(morceau,rectwin(N_fem),N_fem/2,Nfft,44100,'yaxis');
+
+
+
+
+
+
+
+
+
