@@ -32,12 +32,12 @@ if (strcmp(croissance,'out'))
     x = linspace(1,0,N); % fading in (entre 0 et 1) donc 1-0>0
     n_fen = length(x);
      
-    for i = 1: 40000-floor(n_fen)
-        s(i) = s(i) * x(1); 
+    for i = 1: floor(n_fen)
+        s(i) = s(i) * x(i); 
     end 
 
-    for i = (40000-floor(n_fen)) : n_fen
-        s(i) = s(i)* x(i-40000+floor(n_fen)+1);
+    for i = floor(n_fen) : length(s)
+        s(i) = s(i)* x(floor(n_fen));
     end
 end
 soundsc(s, 44100);

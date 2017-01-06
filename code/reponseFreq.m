@@ -11,5 +11,5 @@ subplot 212
 zplane(b,a);
 
 music=filter(b,a,mozart);
-soundsc(music);
+soundsc(music,44100);
 end 
