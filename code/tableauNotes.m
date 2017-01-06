@@ -1,4 +1,4 @@
-function [tab_note] = tab_note_fct()
+function [tab_note] = tableauNotes()%genère le tableaud des notes d'après le document 
 tab_note.C3 = 130.8;
 tab_note.C3d = 138.59;
 tab_note.D3 = 146.83;
