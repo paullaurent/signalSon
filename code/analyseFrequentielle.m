@@ -15,4 +15,9 @@ subplot 212
 plot(axe_f,fftshift(abs(X)));
 title('fréquence en Hz');
 xlim([-fe/2 fe/2]);
+figure;
+plot(angle(x));
+xlabel('echantillon');
+ylabel('phase(rd)');
+xlim([0 N_rep-1]);
 end %réalise l'analyse fréquentielle d'un signal x

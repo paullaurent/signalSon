@@ -4,13 +4,13 @@
 
 %% Question 1 
 
-N = 896658; % nombre de points à générer
+N = 11025; % nombre de points à générer
 f0 = 880; % fréquence du signal sinusoïdal
 fe = 44100; % fréquence d'échantillonnage 
-N_rep = 1000; %nombre de points pour la représentation
+N_rep = 200; %nombre de points pour la représentation
 N_v=0:N-1;
 
-sinusoide=genererSignal(f0,fe,N,N_v);
+sinusoide=genererSignal(f0,fe,N_v);
 analyseFrequentielle(sinusoide,fe,N,N_rep,N_v);
 
 soundsc(sinusoide,fe+2000); % si fe plus grand, son plus aigu
@@ -20,7 +20,7 @@ soundsc(sinusoide,fe+2000); % si fe plus grand, son plus aigu
 %% 4 harmoniques
 nombreHarmoniques = 4;
 note = sonHarmoniques(N,f0,fe,nombreHarmoniques,N_v);
-analyseFrequentielle(note,fe,N,f0,N_rep);
+analyseFrequentielle(note,fe,f0,N_rep);
 soundsc(note,fe);
 
 %% juste le fondamental
@@ -38,7 +38,7 @@ liste_notes = {'C4', 'C4','C4','D4','E4','D4','C4','E4','D4','D4','C4','D4',...
 
 
 morceau=creerSonNotes(liste_notes,N,fe,nombreHarmoniques,N_v);
-
+N_fem=256;
 spectrogramme(morceau,N_fem);
 
 %% Fading in 
